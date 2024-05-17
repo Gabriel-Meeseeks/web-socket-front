@@ -1,0 +1,12 @@
+<ng-container *ngIf="connected">
+  <h2>WebSocket connected</h2>
+  <input [(ngModel)]="sendMessageText" />
+</ng-container>
+
+<button (click)="sendMessage()">Send message</button>
+<button (click)="disconnect()">Disconnect</button>
+<button (click)="connect()">Connect</button>
+
+<ul>
+  <li *ngFor="let message of messages">{{ message }}</li>
+</ul>
